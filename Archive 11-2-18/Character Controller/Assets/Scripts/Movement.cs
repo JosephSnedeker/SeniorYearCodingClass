@@ -66,8 +66,7 @@ public class Movement : MonoBehaviour
                 Debug.Log("on ground");
                 onGround = true;
             
-
-
+             
         }
 
         else
@@ -82,16 +81,25 @@ public class Movement : MonoBehaviour
 
 
         //hitting wall with left side
-        RaycastHit2D wallHitLeftBottom = Physics2D.Raycast(transform.position - new Vector3(.05f, -.04f, 0), new Vector2(-1, 0), -velocity[0]);
-        RaycastHit2D wallHitLeftTop = Physics2D.Raycast(transform.position - new Vector3(.05f, .04f, 0), new Vector2(-1, 0), -velocity[0]);
-        if (wallHitLeftTop.collider == true || wallHitLeftBottom.collider == true)
+        RaycastHit2D wallHitLeftBottom = Physics2D.Raycast(transform.position - new Vector3(.05f, -.04f, 0), new Vector2(-1, 0), velocity[0]);
+       
+        RaycastHit2D wallHitLeftTop = Physics2D.Raycast(transform.position - new Vector3(.05f, .04f, 0), new Vector2(-1, 0), velocity[0]);
+        
+        Utilities.DrawRay(transform.position - new Vector3(-.05f, .04f, 0), new Vector2(-1, 0));
+        if (wallHitLeftTop.collider ? wallHitLeftTop.collider.tag == "Ground" : false || wallHitLeftBottom.collider ? wallHitLeftBottom.collider.tag == "Ground" : false)
         {
             
             placeholder = transform.position;
-            if (wallHitLeftTop.collider.tag == "Ground")
-                placeholder[0] -= wallHitLeftTop.distance;
-            else if (wallHitLeftBottom.collider.tag == "Ground")
+
+            if (wallHitLeftBottom.collider)
+            {
                 placeholder[0] -= wallHitLeftBottom.distance;
+
+            }
+            else if (wallHitLeftTop.collider)
+                placeholder[0] -= wallHitLeftTop.distance;
+
+
             transform.position = placeholder;
             velocity[0] = 0;
             wallTouchLeft = true;
@@ -104,42 +112,29 @@ public class Movement : MonoBehaviour
             wallTouchLeft = false;
         }
 
-        
-        
-        //hitting wall with right side
 
-        RaycastHit2D wallHitRightTop = Physics2D.Raycast(transform.position - new Vector3(.05f, .04f, 0), new Vector2(-1, 0), -velocity[0]);
+
+        //hitting wall with right side
+        RaycastHit2D wallHitRightBottom = Physics2D.Raycast(transform.position - new Vector3(.05f, -.04f, 0), new Vector2(-1, 0), velocity[0]);
+        RaycastHit2D wallHitRightTop = Physics2D.Raycast(transform.position - new Vector3(.05f, .04f, 0), new Vector2(-1, 0), velocity[0]);
         if (wallHitRightTop.collider == true)
         {
             placeholder = transform.position;
-            placeholder[0] -= wallHitRightTop.distance;
+            if (wallHitRightTop.collider.tag == "Ground")
+                placeholder[0] -= wallHitRightTop.distance;
+            else if (wallHitLeftBottom.collider.tag == "Ground")
+                placeholder[0] -= wallHitRightBottom.distance;
             transform.position = placeholder;
             velocity[0] = 0;
             wallTouchLeft = true;
 
             Debug.Log("touching wall");
-
         }
         else
         {
             wallTouchLeft = false;
         }
-        RaycastHit2D wallHitRightBottom = Physics2D.Raycast(transform.position + new Vector3(.05f, -.04f, 0), new Vector2(1, 0), velocity[0]);
-        if (wallHitRightBottom.collider == true)
-        {
-            placeholder = transform.position;
-            placeholder[0] += wallHitRightBottom.distance;
-            transform.position = placeholder;
-            velocity[0] = 0;
-            wallTouchRight = true;
-            
-            Debug.Log("touching wall");
-
-        }
-        else
-        {
-            wallTouchRight = false;
-        }
+       
         //enemy collision
         RaycastHit2D enemyHitRightTop = Physics2D.Raycast(transform.position + new Vector3(.05f, .04f, 0), new Vector2(1, 0), velocity[0]);
         if (enemyHitRightTop.collider)
