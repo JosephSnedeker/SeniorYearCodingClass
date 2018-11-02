@@ -1,0 +1,7 @@
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\obj\Debug\jsnedeker_waterguns.csprojAssemblyReference.cache
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\obj\Debug\jsnedeker_waterguns.csproj.CoreCompileInputs.cache
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\bin\Debug\jsnedeker_waterguns.exe.config
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\bin\Debug\jsnedeker_waterguns.exe
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\bin\Debug\jsnedeker_waterguns.pdb
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\obj\Debug\jsnedeker_waterguns.exe
+C:\Users\135777\OneDrive - Academy District 20\jsnedeker_waterguns\jsnedeker_waterguns\obj\Debug\jsnedeker_waterguns.pdb

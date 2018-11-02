@@ -1,0 +1,7 @@
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\bin\Debug\ConsoleApp7.exe.config
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\bin\Debug\ConsoleApp7.exe
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\bin\Debug\ConsoleApp7.pdb
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\obj\Debug\ConsoleApp7.csprojAssemblyReference.cache
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\obj\Debug\ConsoleApp7.csproj.CoreCompileInputs.cache
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\obj\Debug\ConsoleApp7.exe
+C:\Users\joesn\OneDrive - Academy District 20\ascii\ConsoleApp7\obj\Debug\ConsoleApp7.pdb

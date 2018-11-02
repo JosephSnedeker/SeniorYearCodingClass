@@ -1,0 +1,14 @@
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.exe.config
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.exe
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.pdb
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.csprojAssemblyReference.cache
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.csproj.CoreCompileInputs.cache
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.exe
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.pdb
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.exe.config
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.exe
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\bin\Debug\jSnedeker_CompetencyExam.pdb
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.csprojAssemblyReference.cache
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.csproj.CoreCompileInputs.cache
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.exe
+C:\Users\135777\Desktop\jSnedeker_CompetencyExam\jSnedeker_CompetencyExam\obj\Debug\jSnedeker_CompetencyExam.pdb

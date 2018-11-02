@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/135777/OneDrive - Academy District 20/Millipede/Assets/Scenes/SampleScene.unity
+  isLoaded: 1
+  isActive: 1

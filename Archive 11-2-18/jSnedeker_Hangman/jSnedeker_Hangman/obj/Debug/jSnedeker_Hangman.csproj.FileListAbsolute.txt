@@ -1,0 +1,7 @@
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\bin\Debug\jSnedeker_Hangman.exe.config
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\bin\Debug\jSnedeker_Hangman.exe
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\bin\Debug\jSnedeker_Hangman.pdb
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\obj\Debug\jSnedeker_Hangman.csprojAssemblyReference.cache
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\obj\Debug\jSnedeker_Hangman.csproj.CoreCompileInputs.cache
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\obj\Debug\jSnedeker_Hangman.exe
+C:\Users\135777\OneDrive - Academy District 20\jSnedeker_Hangman\jSnedeker_Hangman\obj\Debug\jSnedeker_Hangman.pdb
