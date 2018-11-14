@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     float gravity = 2;
     [SerializeField]
     Animator animator = new Animator();
+    public int score = 0;
     // Use this for initialization
     private void Awake()
     {
@@ -35,8 +36,8 @@ public class Movement : MonoBehaviour
             moveright();
         
         velocity[1] -= gravity;
-        if (velocity[1] < -.5f)
-            velocity[1] = -.5f;
+        if (velocity[1] < -1)
+            velocity[1] = -1;
         Debug.Log(velocity[1]);
         transform.position += velocity;
         if (velocity[0] > 0)
@@ -53,11 +54,24 @@ public class Movement : MonoBehaviour
             animator.SetBool("TurnLeft", true);
             animator.SetBool("TurnRight", false);
         }
-       
-
+        Debug.Log(score);
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == ("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "threshold")
+        {
+            score++;
+        }
+    }
     void moveright()
     {
         velocity += speed * Vector3.right * Time.deltaTime;
