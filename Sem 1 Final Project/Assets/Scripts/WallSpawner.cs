@@ -15,6 +15,7 @@ public class WallSpawner : MonoBehaviour {
 	void Update () {
         if (transform.position.y - 2.64 - GameManager.Instance.MyCharacter.transform.position.y > 4)
         {
+            
             Vector3 placeholder = transform.position;
             placeholder[1] -= 5.26f * 9;
             transform.position = placeholder;

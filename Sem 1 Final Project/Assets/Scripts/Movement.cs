@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             moveright();
         
-        velocity[1] -= gravity;
+        velocity[1] -= gravity *Time.deltaTime;
         if (velocity[1] < -1)
             velocity[1] = -1;
         Debug.Log(velocity[1]);
@@ -62,7 +63,8 @@ public class Movement : MonoBehaviour
     {
         if (collision.tag == ("Obstacle"))
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("gameover");
+            Debug.Log("DED");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
