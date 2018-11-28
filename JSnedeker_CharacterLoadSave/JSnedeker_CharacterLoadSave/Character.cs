@@ -16,7 +16,7 @@ namespace JSnedeker_CharacterLoadSave
         public int intelligence;
         public int dexterity;
 
-        public Character(string name, int strength, int tenacity, int utility, int perception, int intelligence, int dexterity)
+        public Character(string name = "default", int strength = 0, int tenacity = 0, int utility = 0, int perception = 0, int intelligence = 0, int dexterity = 0)
         {
             this.name = name;
             this.strength = strength;

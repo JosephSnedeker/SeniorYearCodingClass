@@ -79,11 +79,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HighScore.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\ObstacleDestroyer.cs" />
     <Compile Include="Assets\Scripts\ObstacleSpawner.cs" />
+    <Compile Include="Assets\Scripts\ReStart.cs" />
     <Compile Include="Assets\Scripts\WallSpawner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
