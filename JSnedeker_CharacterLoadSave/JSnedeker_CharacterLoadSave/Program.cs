@@ -9,16 +9,11 @@ namespace JSnedeker_CharacterLoadSave
 {
     class Program
     {
-
         static List<Character> characters = new List<Character>();
         static void Main(string[] args)
         {
             int selection;
-
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Characters";
-            DirectoryInfo di = Directory.CreateDirectory(path);
-
-
             do
             {
                 ////////////////////////////////////
@@ -28,6 +23,10 @@ namespace JSnedeker_CharacterLoadSave
                 Console.WriteLine("3. Delete Characater");
                 Console.WriteLine("4. Load Characater");
                 Console.WriteLine("5. Save Characaters");
+                Console.WriteLine("6. List Characaters");
+                Console.WriteLine("7. Clear Console");
+                Console.WriteLine("0. Quit");
+                Console.WriteLine("*********************");
                 ////////////////////////////////////
                 selection = int.Parse(Console.ReadLine());
 
@@ -59,8 +58,9 @@ namespace JSnedeker_CharacterLoadSave
                     if (found)
                     {
                         Character newCharacter = ModifyCharacter(character);
-                        using (StreamWriter sw = new StreamWriter(path + @"/" + origional))
+                        using (StreamWriter sw = new StreamWriter(path + @"/" + origional + ".txt"))
                         {
+                            sw.WriteLine(newCharacter.name);
                             sw.WriteLine(newCharacter.strength);
                             sw.WriteLine(newCharacter.tenacity);
                             sw.WriteLine(newCharacter.utility);
@@ -68,71 +68,43 @@ namespace JSnedeker_CharacterLoadSave
                             sw.WriteLine(newCharacter.intelligence);
                             sw.WriteLine(newCharacter.dexterity);
                         }
+                        DeleteCharacter(path, origional);
                     }
                 }
                 if (selection == 3)
                 {
-                    Console.Clear();
-                    Character character = new Character();
-                    string origional = null;
-                    bool found = false;
-
                     Console.WriteLine("what character");
-                    string search = Console.ReadLine();
-                    for (int i = 0; i < characters.Count; i++)
-                    {
-                        if (characters[i].name == search)
-                        {
-                            origional = characters[i].name;
-                            character = characters[i];
-                            found = true;
-
-                        }
-                    }
-                    if (found)
-                    {
-                        Character newCharacter = ModifyCharacter(character);
-                        File.Delete(path + @"/" + origional);
-                    }
+                    string character = Console.ReadLine();
+                    DeleteCharacter(path, character);
                 }
                 if (selection == 4)
                 {
-                    using(StreamReader sr = new StreamReader(path))
-                    for (int i = 0; i < di.GetFiles(path).Length; i++)
-                    {
-                            characters.Add(di.GetFiles(path));
-                    }
+                    characters = LoadCharacters(path);
                 }
-                    
-
-
-               
-                for (int i = 0; i < characters.Count; i++)
+                if (selection == 5)
                 {
-
-
-                    using (StreamWriter sw = new StreamWriter(path + @"/" + characters[i].name))
+                    for (int i = 0; i < characters.Count; i++)
                     {
-                        sw.WriteLine(characters[i].strength);
-                        sw.WriteLine(characters[i].tenacity);
-                        sw.WriteLine(characters[i].utility);
-                        sw.WriteLine(characters[i].perception);
-                        sw.WriteLine(characters[i].intelligence);
-                        sw.WriteLine(characters[i].dexterity);
+                        using (StreamWriter sw = new StreamWriter(path + @"/" + characters[i].name + ".txt"))
+                        {
+                            sw.WriteLine(characters[i].name);
+                            sw.WriteLine(characters[i].strength);
+                            sw.WriteLine(characters[i].tenacity);
+                            sw.WriteLine(characters[i].utility);
+                            sw.WriteLine(characters[i].perception);
+                            sw.WriteLine(characters[i].intelligence);
+                            sw.WriteLine(characters[i].dexterity);
 
+                        }
                     }
                 }
-                
-
-                
-
-
-
+                if (selection == 6)
+                    ListCharacters(characters);
+                if (selection == 7)
+                    Console.Clear();
 
             } while (selection != 0);
         }
-
-
         static Character CreateCharacter()
         {
             Character character = new Character();
@@ -189,26 +161,48 @@ namespace JSnedeker_CharacterLoadSave
 
                 }
             } while (selection2 != 3);
-           
-          
+
             return character;
         }
 
-
-        static void DeleteCharacter(List<Character> characters, string characterName)
+        static void DeleteCharacter(string path, string character)
         {
-
+            File.Delete(path + "\\" + character + ".txt");
         }
-        static void LoadCharacter(string characterName)
+        static List<Character> LoadCharacters(string path)
         {
+            List<Character> characters = new List<Character>();
 
+            foreach (string dirFile in Directory.GetFiles(path, "*.txt"))
+            {
+                using (StreamReader sr = new StreamReader(dirFile))
+                {
+                    Character character = new Character();
+                    character.name = sr.ReadLine();
+                    character.strength = int.Parse(sr.ReadLine());
+                    character.tenacity = int.Parse(sr.ReadLine());
+                    character.utility = int.Parse(sr.ReadLine());
+                    character.perception = int.Parse(sr.ReadLine());
+                    character.intelligence = int.Parse(sr.ReadLine());
+                    character.dexterity = int.Parse(sr.ReadLine());
+                    characters.Add(character);
+                }
+            }
+            return characters;
         }
-        
+        static void ListCharacters(List<Character> characters)
+        {
+            for (int i = 0; i < characters.Count; i++)
+            {
+                Console.WriteLine(characters[i].name);
+                Console.WriteLine(characters[i].strength);
+                Console.WriteLine(characters[i].tenacity);
+                Console.WriteLine(characters[i].utility);
+                Console.WriteLine(characters[i].perception);
+                Console.WriteLine(characters[i].intelligence);
+                Console.WriteLine(characters[i].dexterity);
+            }
+        }
+
     }
 }
-        
-    
-
-
-
-         
