@@ -1,7 +1,0 @@
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\bin\Debug\AskiiProgram.exe.config
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\bin\Debug\AskiiProgram.exe
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\bin\Debug\AskiiProgram.pdb
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\obj\Debug\AskiiProgram.csprojAssemblyReference.cache
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\obj\Debug\AskiiProgram.csproj.CoreCompileInputs.cache
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\obj\Debug\AskiiProgram.exe
-C:\Users\135777\OneDrive - Academy District 20\AskiiProgram\AskiiProgram\obj\Debug\AskiiProgram.pdb

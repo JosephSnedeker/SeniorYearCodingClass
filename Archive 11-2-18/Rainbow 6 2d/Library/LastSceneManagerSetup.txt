@@ -1,4 +1,0 @@
-sceneSetups:
-- path: C:/Users/135777/OneDrive - Academy District 20/Tennis 1.0/Assets/Scenes/SampleScene.unity
-  isLoaded: 1
-  isActive: 1

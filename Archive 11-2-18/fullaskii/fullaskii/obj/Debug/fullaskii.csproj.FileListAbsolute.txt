@@ -1,7 +1,0 @@
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\bin\Debug\fullaskii.exe.config
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\bin\Debug\fullaskii.exe
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\bin\Debug\fullaskii.pdb
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\obj\Debug\fullaskii.csprojAssemblyReference.cache
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\obj\Debug\fullaskii.csproj.CoreCompileInputs.cache
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\obj\Debug\fullaskii.exe
-C:\Users\135777\OneDrive - Academy District 20\fullaskii\fullaskii\obj\Debug\fullaskii.pdb

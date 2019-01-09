@@ -1,7 +1,0 @@
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\bin\Debug\AskiiAlphabet.exe.config
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\bin\Debug\AskiiAlphabet.exe
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\bin\Debug\AskiiAlphabet.pdb
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\obj\Debug\AskiiAlphabet.csprojAssemblyReference.cache
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\obj\Debug\AskiiAlphabet.csproj.CoreCompileInputs.cache
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\obj\Debug\AskiiAlphabet.exe
-C:\Users\135777\OneDrive - Academy District 20\AskiiAlphabet\AskiiAlphabet\obj\Debug\AskiiAlphabet.pdb
