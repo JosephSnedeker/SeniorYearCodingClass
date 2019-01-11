@@ -21,15 +21,31 @@ namespace Stack
         //Pop
         public int Pop()
         {
-            int x = holder[holder.Count - 1];
-            holder.RemoveAt(holder.Count - 1);
-            return x;  
+            if (holder.Count != 0)
+            {
+                int x = holder[holder.Count - 1];
+                holder.RemoveAt(holder.Count - 1);
+                return x;
+            }
+            else
+            {
+                return -101010;
+            }
+           
             
         }
         //Peek
         public int Peek()
         {
-            return holder[holder.Count - 1];
+            if (holder.Count != 0)
+            {
+                return holder[holder.Count - 1];
+            }
+            else
+            {
+                return -101010;
+            }
+            
         }
         //Print
         public void Print()

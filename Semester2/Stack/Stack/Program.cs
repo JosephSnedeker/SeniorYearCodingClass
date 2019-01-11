@@ -29,11 +29,27 @@ namespace Stack
                 }
                 if (choice == 2)
                 {
-                    Console.WriteLine(myStack.Pop() + " has been popped");
+                    if(myStack.Pop() == -101010)
+                    {
+                        Console.WriteLine("There is nothing to pop");
+                    }
+                    else
+                    {
+                        Console.WriteLine(myStack.Pop() + " has been popped");
+                    }
+                    
                 }
                 if (choice == 3)
                 {
-                    Console.WriteLine(myStack.Peek() + " has been peeked");
+                    if(myStack.Peek() == -101010)
+                    {
+                        Console.WriteLine("There is nothing to peek");
+                    }
+                    else
+                    {
+                        Console.WriteLine(myStack.Peek() + " has been peeked");
+                    }
+                    
                 }
                 if (choice == 4)
                 {
