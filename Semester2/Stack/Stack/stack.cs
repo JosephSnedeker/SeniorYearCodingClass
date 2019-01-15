@@ -11,7 +11,7 @@ namespace Stack
         List<int> holder = new List<int>();
         public Stack()
         {
-
+             
         }
         //Push
         public void Push(int val)

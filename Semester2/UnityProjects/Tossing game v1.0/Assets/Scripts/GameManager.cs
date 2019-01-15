@@ -12,6 +12,8 @@ public class GameManager
 
     public Camera playerCam;
 
+    public int ballCount = 0;
+
 
     public static GameManager Instance
     { get { return instance ?? ((instance = new GameManager())); } }

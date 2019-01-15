@@ -7,6 +7,9 @@ public class Ball : MonoBehaviour
     private Rigidbody rb;
     Vector3 tossDirection;
     Vector3 initialToss;
+    [SerializeField]
+    float acceleration = -2f;
+    float currentFallVelocity = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +18,24 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         initialToss = new Vector3(0, 1, 1);
         tossDirection = GameManager.Instance.playerCam.transform.forward;
-        
+        GameManager.Instance.ballCount += 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentFallVelocity += acceleration * Time.deltaTime * Time.deltaTime;
+        rb.MovePosition(rb.transform.position + (tossDirection  + new Vector3(0, currentFallVelocity, 0)));
         
-        rb.MovePosition(rb.transform.position + tossDirection  - new Vector3(0, .5f, 0));
-        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Environment"))
+        {
+            acceleration = 0;
+            tossDirection = Vector3.zero;
+            currentFallVelocity = 0;
+        }
+
     }
 }
