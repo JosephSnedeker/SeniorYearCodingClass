@@ -8,7 +8,9 @@ public class GameManager
 
     public Rigidbody player { get; set; }
 
-    public Quaternion look { get; set; }
+    public Vector3 look { get; set; }
+
+    public Camera playerCam;
 
 
     public static GameManager Instance

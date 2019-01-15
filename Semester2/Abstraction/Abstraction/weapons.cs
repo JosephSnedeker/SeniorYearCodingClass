@@ -14,8 +14,7 @@ namespace Abstraction
        public weapons(float weight, float value, float damage, string effect)
             : base(weight, value)
         {
-            this.weight = weight;
-            this.value = value;                
+                           
             this.damage = damage;
             this.effect = effect;
         }

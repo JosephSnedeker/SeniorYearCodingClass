@@ -22,7 +22,8 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         GameManager.Instance.player = rb;
-        GameManager.Instance.look = Quaternion.LookRotation(cam.transform.rotation.eulerAngles);
+        GameManager.Instance.look = (cam.transform.rotation.eulerAngles);
+        GameManager.Instance.playerCam = cam;
     }
     public void Move (Vector3 velocity2)
     {
