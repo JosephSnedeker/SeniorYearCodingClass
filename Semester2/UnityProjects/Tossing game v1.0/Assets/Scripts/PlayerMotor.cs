@@ -15,7 +15,7 @@ public class PlayerMotor : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        GameManager.Instance.ballCams.Add(cam);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class PlayerMotor : MonoBehaviour
     {
         GameManager.Instance.player = rb;
         GameManager.Instance.look = (cam.transform.rotation.eulerAngles);
-        GameManager.Instance.playerCam = cam;
+        
     }
     public void Move (Vector3 velocity2)
     {
