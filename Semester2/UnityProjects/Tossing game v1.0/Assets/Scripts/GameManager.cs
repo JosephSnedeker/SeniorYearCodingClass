@@ -10,7 +10,11 @@ public class GameManager
 
     public Vector3 look { get; set; }
 
-    public Camera playerCam;
+    public Camera playerCam { get; set; }
+
+    public List<Camera> ballCams { get; set; }
+    
+     
 
     public int ballCount = 0;
 
