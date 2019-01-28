@@ -28,13 +28,14 @@ namespace QueueClass
                 }
                 if (choice == 2)
                 {
-                    if (myStack.deQueue() == -101010)
+                    int result = myStack.deQueue();
+                    if (result == -101010)
                     {
                         Console.WriteLine("There is nothing to deQueue");
                     }
                     else
                     {
-                        Console.WriteLine(myStack.deQueue() + " has been deQueued");
+                        Console.WriteLine(result + " has been deQueued");
                     }
 
                 }

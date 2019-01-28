@@ -23,8 +23,8 @@ namespace QueueClass
         {
             if (holder.Count != 0)
             {
-                int x = holder[holder.Count - 1];
-                holder.RemoveAt(holder.Count - 1);
+                int x = holder[0];
+                holder.RemoveAt(0);
                 return x;
             }
             else
