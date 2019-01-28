@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stack
+namespace QueueClass
 {
-    class Stack
+    class Queue
     {
         List<int> holder = new List<int>();
-        public Stack()
+        public Queue()
         {
-             
+
         }
         //Push
-        public void Push(int val)
+        public void enQueue(int val)
         {
             holder.Add(val);
         }
         //Pop
-        public int Pop()
+        public int deQueue()
         {
             if (holder.Count != 0)
             {
@@ -31,28 +31,28 @@ namespace Stack
             {
                 return -101010;
             }
-           
-            
+
+
         }
         //Peek
         public int Peek()
         {
             if (holder.Count != 0)
             {
-                return holder[holder.Count - 1];
+                return holder[0];
             }
             else
             {
                 return -101010;
             }
-            
+
         }
         //Print
         public void Print()
         {
-            for (int i = holder.Count - 1; i > -1; i--)
+            for (int i = 0; i < holder.Count; i++)
             {
-                Console.WriteLine(holder[i]);
+                Console.Write(holder[i]+ ", ");
             }
         }
         public List<int> Search(int val)
@@ -68,6 +68,4 @@ namespace Stack
             return positions;
         }
     }
-
-
 }
