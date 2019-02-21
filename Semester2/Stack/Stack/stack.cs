@@ -58,11 +58,11 @@ namespace Stack
         public List<int> Search(int val)
         {
             List<int> positions = new List<int>();
-            for (int i = 0; i < holder.Count; i++)
+            for (int i = holder.Count - 1; i >= 0; i--)
             {
                 if (val == holder[i])
                 {
-                    positions.Add(i);
+                    positions.Add((holder.Count - 1) -i);
                 }
             }
             return positions;

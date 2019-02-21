@@ -11,7 +11,7 @@ namespace QueueClass
         static void Main(string[] args)
         {
             int choice = -1;
-            Queue myStack = new Queue();
+            Queue<int>  myStack = new Queue<int>();
             while (choice != 0)
             {
                 Console.WriteLine("Choose an option");
@@ -20,6 +20,7 @@ namespace QueueClass
                 Console.WriteLine("3. Peek");
                 Console.WriteLine("4. Print");
                 Console.WriteLine("5. Search");
+                
                 choice = int.Parse(Console.ReadLine());
                 if (choice == 1)
                 {
@@ -70,6 +71,15 @@ namespace QueueClass
                     }
 
 
+                }
+                if (choice == 6)
+                {
+                    Random rand = new Random();
+                    Queue<Currencies> currencies = new Queue<Currencies>();
+                    for (int i = 0; i < 10; i++)
+                    {
+                        
+                    }
                 }
                 Console.ReadKey();
                 Console.Clear();

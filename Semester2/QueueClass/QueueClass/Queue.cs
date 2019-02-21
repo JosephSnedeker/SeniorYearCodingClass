@@ -6,36 +6,38 @@ using System.Threading.Tasks;
 
 namespace QueueClass
 {
-    class Queue
+    class Queue<T>: IEmptyable, IPrintable, ICountable where T : IComparable
     {
-        List<int> holder = new List<int>();
+        
+        List<T> holder = new List<T>();
         public Queue()
         {
 
         }
         //Push
-        public void enQueue(int val)
+        public void enQueue(T val)
         {
             holder.Add(val);
         }
         //Pop
-        public int deQueue()
+        public T deQueue()
         {
             if (holder.Count != 0)
             {
-                int x = holder[0];
+                T x = holder[0];
                 holder.RemoveAt(0);
                 return x;
             }
             else
             {
-                return -101010;
+
+                return default(T);
             }
 
 
         }
         //Peek
-        public int Peek()
+        public T Peek()
         {
             if (holder.Count != 0)
             {
@@ -43,7 +45,7 @@ namespace QueueClass
             }
             else
             {
-                return -101010;
+                return default(T);
             }
 
         }
@@ -55,17 +57,31 @@ namespace QueueClass
                 Console.Write(holder[i]+ ", ");
             }
         }
-        public List<int> Search(int val)
+        public List<int> Search(T val)
         {
             List<int> positions = new List<int>();
             for (int i = 0; i < holder.Count; i++)
             {
-                if (val == holder[i])
+                if (val.CompareTo(holder[i]) == 0)
                 {
                     positions.Add(i);
+
                 }
             }
             return positions;
         }
+
+        public void Empty()
+        {
+            holder.Clear();
+        }
+
+        public int Count()
+        {
+            return holder.Count();
+            
+        }
+
+       
     }
 }
