@@ -27,7 +27,7 @@ namespace Sudoku
         {
             Board = new int[9, 9] {
                 {0,0,0,2,6,0,7,0,1 },
-                {6,8,0,0,7,0,0,9,0},
+                {6,8,0,0,7,0,0,9,0 },
                 {1,9,0,0,0,4,5,0,0 },
                 {8,2,0,1,0,0,0,4,0 },
                 {0,0,4,6,0,2,9,0,0 },
@@ -35,6 +35,7 @@ namespace Sudoku
                 {0,0,9,3,0,0,0,7,4 },
                 {0,4,0,0,5,0,0,3,6 },
                 {7,0,3,0,1,8,0,0,0 }};
+
         }
 
         /// <summary>
@@ -49,14 +50,14 @@ namespace Sudoku
         /// <param name="fileName">Name of the file you want to load</param>
         public SudokuBoard(string fileName)
         {
-            
+
             using (StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + fileName))
             {
                 for (int i = 0; i < 81; i++)
                 {
-                    Board = sr.Read()
+                    throw new NotImplementedException();
                 }
-            
+
             }
         }
 
@@ -77,8 +78,8 @@ namespace Sudoku
         /// </returns>
         public bool VerifyBoard()
         {
-            
-            
+
+
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -89,23 +90,79 @@ namespace Sudoku
                     }
                 }
             }
-            for (int i = 0; i < 3; i++)
+            for (int x = 0; x < 3; x++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int y = 0; y < 3; y++)
                 {
-                     
+                    List<int> square = new List<int>(); 
+                    for (int i = 0; i < 3; i++)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            square.Add(Board[i + x * 3, j + y * 3]);
+                        }
+                    }
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        if (!square.Contains(i))
+                        {
+                            return false;
+                        }
+                    }
+                    square.Clear();
                 }
+            }
+            List<int> horz = new List<int>();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    horz.Add(Board[i, j]);
+                }
+                for (int x = 1; x <= 9; x++)
+                {
+                    if (!horz.Contains(x))
+                    {
+                        return false;
+                    }
+                }
+                horz.Clear();
+
             }
 
 
-            
+            List<int> vert = new List<int>();
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    vert.Add(Board[j, i]);
+                }
+                for (int x = 1; x <= 9; x++)
+                {
+                    if (!vert.Contains(x))
+                    {
+                        return false;
+                    }
+                }
+                vert.Clear();
 
-            //Check all columns in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
-
-            //Check all rows in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
-
-            //Check all boxes in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+            }
+            return true;
         }
+
+
+
+
+
+
+
+
+        //Check all columns in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+
+        //Check all rows in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+
+        //Check all boxes in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
 
         /// <summary>
         /// Your code must look at all the Sudoku board cells in the specified column to find what digits are already used; none of those digits can be used in the blank cell. 
@@ -155,7 +212,7 @@ namespace Sudoku
                     Console.WriteLine("  ---------+---------+---------");
                 }
                 Console.Write(row + 1 + "|");
-                for(int col = 0; col < 9; col++)
+                for (int col = 0; col < 9; col++)
                 {
                     if (col % 3 == 0 && col != 0)
                     {
@@ -200,3 +257,5 @@ namespace Sudoku
         }
     }
 }
+
+
