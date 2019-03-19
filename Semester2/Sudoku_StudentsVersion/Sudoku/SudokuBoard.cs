@@ -94,7 +94,7 @@ namespace Sudoku
             {
                 for (int y = 0; y < 3; y++)
                 {
-                    List<int> square = new List<int>(); 
+                    List<int> square = new List<int>();
                     for (int i = 0; i < 3; i++)
                     {
                         for (int j = 0; j < 3; j++)
@@ -185,17 +185,117 @@ namespace Sudoku
         /// <returns>List of valid integers for the given row and column</returns>
         public List<int> FindLegalDigits(int row, int col)
         {
-            throw new NotImplementedException();
+            List<int> digits = new List<int>();
+            List<int> legalDigits = new List<int>();
+            for (int i = 0; i < 9; i++)
+            {
+                digits.Add(Board[i, row]);
+            }
+            for (int i = 0; i < 9; i++)
+            {
+                digits.Add(Board[col, i]);
+            }
+            if (row < 3 && col < 3)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row < 3 && col > 2 && col < 6)
+            {
+                for (int i = 2; i < 6; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row < 3 && col > 5)
+            {
+                for (int i = 6; i < 9; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 2 && row < 6 && col < 3)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 2; j < 6; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 2 && row < 6 && col > 2 && col < 6)
+            {
+                for (int i = 2; i < 6; i++)
+                {
+                    for (int j = 2; j < 6; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 2 && row < 6 && col > 5)
+            {
+                for (int i = 6; i < 9; i++)
+                {
+                    for (int j = 2; j < 6; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 5 && col < 3)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 6; j < 9; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 5 && col > 2 && col < 6)
+            {
+                for (int i = 2; i < 6; i++)
+                {
+                    for (int j = 6; j < 9; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            else if (row > 5 && col > 5)
+            {
+                for (int i = 6; i < 9; i++)
+                {
+                    for (int j = 6; j < 9; j++)
+                    {
+                        digits.Add(Board[i, j]);
+                    }
+                }
+            }
+            for (int i = 1; i <= 9; i++)
+            {
+                if (!digits.Contains(i))
+                {
+                    legalDigits.Add(i);
+                }
+            }
+            return legalDigits;
 
-            //Create list of all possible digits (1-9)
 
-            //Remove from the list all elements in the row
 
-            //Remove from the list all elements in the column
-
-            //remove from the list all elements in the box
-
-            //return the list
         }
 
         /// <summary>
