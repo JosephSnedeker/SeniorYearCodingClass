@@ -12,6 +12,12 @@ namespace Algorithms
         static void Main(string[] args)
         {
             Problem1();
+            Console.WriteLine();
+            Problem4();
+            Console.WriteLine();
+            Problem3();
+            Console.ReadKey();
+            
 
         }
         static void Problem1()
@@ -62,20 +68,74 @@ namespace Algorithms
                 }
 
                 Console.WriteLine("$" + total.ToString("0.00"));
-                Console.ReadKey();
+
             }
         }
-        static void Problem2()
+        static void Problem4()
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + @"Prob02.in_.txt";
+            int x;
+            int y;
+            string path = AppDomain.CurrentDomain.BaseDirectory + @"Prob04.in_.txt";
             using (StreamReader sr = new StreamReader(path))
             {
-                int[]
-                while (sr.Peek() > -1)
+                while (sr.Peek() != -1)
                 {
-
+                    x = int.Parse(sr.ReadLine());
+                    y = FactorialRecursion(x);
+                    Console.WriteLine(y);
                 }
 
+            }
+
+        }
+        static int FactorialRecursion(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * FactorialRecursion(n - 1);
+            }
+        }
+        static void Problem3()
+        {
+            int x = 0;
+            string key = "";
+            string coded = "";
+            List<int> codedList = new List<int>();
+            string decoded = "";
+            string path = AppDomain.CurrentDomain.BaseDirectory + @"Prob03.in_.txt";
+            using (StreamReader sr = new StreamReader(path))
+            {
+                key += " ";
+                key += sr.ReadLine();
+                while (sr.Peek() != -1)
+                {
+                    coded += sr.Read().ToString(); ;                    
+                }
+                for (int i = 0; i < coded.Length; i++)
+                {
+                    x++;
+                    if (coded[i] == '-')
+                    {
+                        for (int j = 0; j < x; j++)
+                        {
+                            codedList.Add(coded[i - x]);
+                            
+                            
+                        }
+                        x = 0;
+
+                    }
+                }
+                
+                for (int i = 0; i < coded.Length; i++)
+                {
+                    //decoded += key[];
+                }
+                Console.WriteLine(decoded);
             }
         }
     }
