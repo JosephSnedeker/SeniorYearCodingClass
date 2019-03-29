@@ -17,7 +17,7 @@ namespace Algorithms
             Console.WriteLine();
             Problem3();
             Console.ReadKey();
-            
+
 
         }
         static void Problem1()
@@ -109,33 +109,46 @@ namespace Algorithms
             string path = AppDomain.CurrentDomain.BaseDirectory + @"Prob03.in_.txt";
             using (StreamReader sr = new StreamReader(path))
             {
+
                 key += " ";
                 key += sr.ReadLine();
-                while (sr.Peek() != -1)
+
+                ReadBetweenDashes(path);
+            }
+
+        }
+        static List<List<List<int>>> ReadBetweenDashes(string path)
+        {
+            
+            List<int> valueToReturn = new List<int>();
+            List<List<int>> finalList = new List<List<int>>();
+            List<List<List<int>>> finalListTwo = new List<List<List<int>>>();
+            using (StreamReader sr = new StreamReader(path))
+            {
+                sr.ReadLine();
+                while (!sr.EndOfStream)
                 {
-                    coded += sr.Read().ToString(); ;                    
-                }
-                for (int i = 0; i < coded.Length; i++)
-                {
-                    x++;
-                    if (coded[i] == '-')
+
+
+                    while (!char.IsWhiteSpace((char)sr.Peek()))
                     {
-                        for (int j = 0; j < x; j++)
+
+                        valueToReturn = new List<int>();
+                        while (sr.Peek() != '-')
                         {
-                            codedList.Add(coded[i - x]);
                             
+                            valueToReturn.Add(int.Parse((sr.Read()).ToString()) - 48);
                             
                         }
-                        x = 0;
+                        finalList.Add(valueToReturn);
+                        sr.Read();
+                        
 
                     }
+                    finalListTwo.Add(finalList);
                 }
+                return finalListTwo;
                 
-                for (int i = 0; i < coded.Length; i++)
-                {
-                    //decoded += key[];
-                }
-                Console.WriteLine(decoded);
             }
         }
     }
