@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -354,7 +354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7f444eb6a57085438d358f457448fe0, type: 2}
+  - {fileID: 2100000, guid: dc47f4f691774254a9e34ca80418f7a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -393,7 +393,6 @@ GameObject:
   - component: {fileID: 1500385434}
   - component: {fileID: 1500385433}
   - component: {fileID: 1500385432}
-  - component: {fileID: 1500385431}
   - component: {fileID: 1500385430}
   - component: {fileID: 1500385435}
   - component: {fileID: 1500385436}
@@ -413,20 +412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1500385429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2185852782999ed47ae3e4884a51f04a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 2085441096}
---- !u!114 &1500385431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500385429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09c22f28e832f24bad1c70aae9a6ccc, type: 3}
+  m_Script: {fileID: 11500000, guid: 500187037eff6234fb736fe7fc984433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
@@ -486,11 +472,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1500385429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9d8b4fdcbf16d4c9b17e28f8836389, type: 3}
+  m_Script: {fileID: 11500000, guid: 61557c836f5a860429e6acd046486009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 677550915908693442, guid: fc4b6f78ceb0f4a438bb7740bb588ce2,
-    type: 3}
+  cam: {fileID: 2085441096}
 --- !u!114 &1500385436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,9 +485,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1500385429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0502cb53ef1cdd243b1362ead49486d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 710f282e57879464688f292c7bec0bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 677550915908693442, guid: 83417302d33c83e4486a51b16a2487a5,
+    type: 3}
 --- !u!1 &1732131555
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ namespace Sudoku
                         Console.ReadKey();
                         break;
                     case 4:
-                        if (SolveBoardIterativelyWithQueue(ref board))
+                        if (SolveBoardIterativelyWithStack(ref board))
                         {
                             Console.WriteLine("The board was solved successfully!");
                             board.PrintBoard();
@@ -177,9 +177,9 @@ namespace Sudoku
         /// </summary>
         /// <param name="board">The board to solve</param>
         /// <returns>True if the board was solved, false otherwise.</returns>
-        public static bool SolveBoardIterativelyWithQueue(ref SudokuBoard board)
+        public static bool SolveBoardIterativelyWithStack(ref SudokuBoard board)
         {
-            Queue<SudokuBoard> boards = new Queue<SudokuBoard>();
+            Stack<SudokuBoard> boards = new Stack<SudokuBoard>();
             throw new NotImplementedException();
 
             //As long as there is a board in the queue, do the following:

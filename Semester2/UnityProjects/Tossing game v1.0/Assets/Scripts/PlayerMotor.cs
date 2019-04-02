@@ -16,6 +16,7 @@ public class PlayerMotor : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         GameManager.Instance.ballCams.Add(cam);
+       
     }
 
     // Update is called once per frame
