@@ -68,11 +68,43 @@ namespace BinaryTree
         }
         public void Remove(char character)
         {
-            throw new NotImplementedException();
+           
+            
+            Remove(Root, character);
+            
         }
         private Node Remove(Node node, Char character)
         {
+            if (node.Value == character)
+            {
+                node.Value = Remove2(node.RightChild).Value;
+                return node;
+            }
+            else
+            {
+                if (character < node.Value && node.LeftChild != null)
+                {
+                    return Remove(node.LeftChild, character);
+                }
+                else if (character > node.Value && node.RightChild != null)
+
+                {
+                    return Remove(node.RightChild, character);
+                }
+            }
             
+            
+        }
+        private Node Remove2(Node node)
+        {
+            if (node.LeftChild != null)
+            {
+                return Remove2(node.LeftChild);
+            }
+            else
+            {
+                return node;
+            }
         }
 
         public bool Search(Char character)

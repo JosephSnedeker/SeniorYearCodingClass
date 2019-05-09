@@ -17,8 +17,13 @@ namespace BinaryTree
             binaryTree.Insert('y');
             binaryTree.Insert('Z');
             binaryTree.Insert('2');
+            binaryTree.Insert('7');
+            binaryTree.Insert('8');
+            binaryTree.Insert('9');
+            binaryTree.Insert('Y');
+            binaryTree.Remove('C');
             binaryTree.Print();
-            Console.WriteLine(binaryTree.Search('7'));
+            
             Console.WriteLine(binaryTree.Count);
             Console.ReadKey();
 
